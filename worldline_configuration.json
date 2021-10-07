@@ -1,8 +1,8 @@
 {
-    "csrf_token": "Ijk1YWRmMzVkZmFmMmQxZGY1Y2E3MjI4ZjM4NjYxMjY4OTMyOGMwNWQi.YFs5hA.WghrwNY_cLVbwZQpz_uLwnqm5qU",
-    "merchantCode": "T3348",
+    "csrf_token": "ImQ1ZThkODVmODYxM2JjNDM5ZGQwNzYzMjBjOWUzMzYxYTcwMWY1MmMi.YV1enQ.quA1egGKK68eE_e0T1AmxYo1tjA",
+    "merchantCode": "T206030",
     "merchantSchemeCode": "test",
-    "SALT": "1496899267KMOWJE",
+    "SALT": "3976262521OAOQBJ",
     "currency": "INR",
     "typeOfPayment": "TEST",
     "primaryColor": "#808080",

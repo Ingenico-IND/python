@@ -34,7 +34,7 @@ def admin():
     if request.method == 'POST':
         request_data = request.form.to_dict()
         json_object = json.dumps(request_data, indent=4)
-        f = open('ingenico_configuration.json', 'w')
+        f = open('worldline_configuration.json', 'w')
         f.write(json_object)
         f.close()
         flash('Success: Information has been updated.')
@@ -135,7 +135,7 @@ def get_hash_object(hashed_data, data, config_data):
             'returnUrl': data['returnUrl'],
             'paymentMode': config_data['paymentMode'],
             'paymentModeOrder': config_data['paymentModeOrder'].replace(' ', '').split(','),
-            'checkoutElement': '#ingenico_embeded_popup' if string_to_bool[config_data['embedPaymentGatewayOnPage']] else '',
+            'checkoutElement': '#worldline_embeded_popup' if string_to_bool[config_data['embedPaymentGatewayOnPage']] else '',
             'merchantLogoUrl': config_data['logoURL'],
             'merchantId': data['merchantCode'],  # provided merchant
             'merchantMsg': config_data['merchantMessage'],

@@ -27,7 +27,7 @@
 			if ($("#enableSI").val() == "true") {
 				var merchantdetails = "{{ config_data['siDetailsAtMerchantEnd'] }}"
 				console.log(merchantdetails);
-				$("#ingenico_admin_table").append('<tr id="merchantdetailsrow">\
+				$("#worldline_admin_table").append('<tr id="merchantdetailsrow">\
 						<th><label for="siDetailsAtMerchantEnd">Enable SI Details at Merchant End</label></th>\
 						<td><select name="siDetailsAtMerchantEnd" id="siDetailsAtMerchantEnd" style="width:85%">\
 						    <option value="true">Enabled</option>\
@@ -37,7 +37,7 @@
 
 				var amount = "{{ config_data['amountType'] }}"
 				console.log(amount);
-				$("#ingenico_admin_table").append('<tr id="amount"> \
+				$("#worldline_admin_table").append('<tr id="amount"> \
 						<th scope="row"><label for="amountType">Amount Type</label></th>\
 						<td><select id="amountType" name="amountType" style="width:85%" ><option value="M">Variable</option>\
 									<option value="F">Fixed</option> \
@@ -46,7 +46,7 @@
 
 				var freq = "{{ config_data['frequency'] }}"
 				console.log(freq);
-				$("#ingenico_admin_table").append('<tr id="freq"> \
+				$("#worldline_admin_table").append('<tr id="freq"> \
 						<th scope="row"><label for="frequency">Frequency</label></th>\
 						<td><select id="frequency" name="frequency" style="width:85%"><option value="ADHO">As and when presented</option>\
 									<option value="DAIL">Daily</option> \
@@ -62,18 +62,18 @@
 
 			$("#enableSI").change(function(){
 				if ($("#enableSI").val()=="true") {
-					$("#ingenico_admin_table").append('<tr id="merchantdetailsrow">\
+					$("#worldline_admin_table").append('<tr id="merchantdetailsrow">\
 						<th><label for="siDetailsAtMerchantEnd">Enable SI Details at Merchant End</label></th>\
 						<td><select name="siDetailsAtMerchantEnd" id="siDetailsAtMerchantEnd" style="width:85%">\
 						    <option value="true">Enabled</option>\
 						    <option value="false">Disabled</option>\
 						</select></td></tr>');
-					$("#ingenico_admin_table").append('<tr id="amount"> \
+					$("#worldline_admin_table").append('<tr id="amount"> \
 							<th scope="row"><label for="amountType">Amount Type</label></th>\
 							<td><select id="amountType" name="amountType" style="width:85%" ><option value="M" selected >Variable</option>\
 										<option value="F">Fixed</option> \
 							</select></td></tr>');
-					$("#ingenico_admin_table").append('<tr id="freq"> \
+					$("#worldline_admin_table").append('<tr id="freq"> \
 							<th scope="row"><label for="frequency">Frequency</label></th>\
 							<td><select id="frequency" name="frequency" style="width:85%"><option value="ADHO" selected >As and when presented</option>\
 										<option value="DAIL">Daily</option> \
@@ -96,7 +96,6 @@
 </head>
 
 <body>
-	<h2>Ingenico Admin</h2>
 	{% for message in get_flashed_messages() %}
         <div class="success">
         	{{ message }}
@@ -104,13 +103,15 @@
     {% endfor %}
 	<form method="POST" action="">
 		{{ form.hidden_tag() }}
-		<table id="ingenico_admin_table" cellpadding="10" cellspacing="10">
+		<img src="{{url_for('static', filename='Worldline.png')}}" align="middle" width="30%" />
+		<h2>Worldline Admin</h2>
+		<table id="worldline_admin_table" cellpadding="10" cellspacing="10">
 			<tr>
 				<th>
 					Description
 				</th>
 				<td>
-					Ingenico ePayments (a Worldline brand) is India's leading digital payment solutions company. Being a company with more than 45 years of global payment experience, we are present in India for over 20 years and are powering over 550,000 businesses with our tailored payment solution.
+					Worldline ePayment Services is India's leading digital payment solutions company. Being a company with more than 45 years of global payment experience, we are present in India for over 20 years and are powering over 550,000 businesses with our tailored payment solution.
 				</td>
 			</tr>
 
@@ -279,7 +280,7 @@
 				<td>
 					{{ form.paymentMode(style="width:85%") }}
 					<br><br>
-					If Bank selection is at Ingenico ePayments India Pvt. Ltd. (a Worldline brand) end then select all, if bank selection at Merchant end then pass appropriate mode respective to selected option
+					If Bank selection is at Worldline ePayment Services end then select all, if bank selection at Merchant end then pass appropriate mode respective to selected option
 				</td>
 			</tr>
 

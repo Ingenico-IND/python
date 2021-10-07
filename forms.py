@@ -7,7 +7,7 @@ import json
 
 def read_data():
     try:
-        f = open('ingenico_configuration.json', 'r')
+        f = open('worldline_configuration.json', 'r')
         config_data = json.loads(f.read())
         f.close()
     except FileNotFoundError:
